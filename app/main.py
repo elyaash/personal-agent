@@ -13,6 +13,7 @@ app = FastAPI(title="Personal Agent API")
 origins = [
     "http://localhost:5173",
     "https://prakashrajput.com",
+    "https://www.prakashrajput.com"
 ]
 
 app.add_middleware(
@@ -52,6 +53,9 @@ async def ask_options():
 async def root():
     return {"message": "Personal Agent is running"}
 
+@app.get("/health-check")
+async def root():
+    return {"message": "Personal Agent is running"}
 if __name__ == "__main__":
     import uvicorn
-    uvicorn.run(app, host="127.0.0.1", port=8000)
+    uvicorn.run(app, host="0.0.0.0", port=8080)
