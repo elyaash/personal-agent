@@ -1,0 +1,24 @@
+# Python
+__pycache__/
+*.py[cod]
+*$py.class
+.venv/
+build/
+dist/
+*.egg-info/
+
+# Environment
+.env
+
+# Logs
+app.log
+*.log
+
+
+# IDEs
+.vscode/
+.idea/
+.DS_Store
+
+# uv
+uv.lock
